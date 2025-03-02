@@ -18,7 +18,7 @@ export const Login: React.FC = () => {
             } else {
                 alert('Login errato');
             }
-        } catch (error) {
+        } catch {
             alert('Errore di connessione');
         }
     };

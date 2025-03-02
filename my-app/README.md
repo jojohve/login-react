@@ -52,3 +52,12 @@ export default tseslint.config({
   },
 })
 ```
+
+Per avviare la pagina web
+"cd my-app"
+"npm run dev"
+
+Per avviare il server mock
+"cd my-app"
+"npm install json-server --save-dev"
+"npx json-server --watch db.json --port 5000"
