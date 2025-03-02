@@ -1,25 +1,21 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export const Login: React.FC = () => {
+export const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
     const validate = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        try {
-            const response = await fetch('http://localhost:5000/users');
-            const users = await response.json();
-            const user = users.find((user: { username: string, password: string }) => user.username === username && user.password === password);
-            if (user) {
-                alert('Login eseguito!');
-                navigate('/login');
-            } else {
-                alert('Login errato');
-            }
-        } catch {
-            alert('Errore di connessione');
+        const response = await fetch('http://localhost:5000/users');
+        const users = await response.json();
+        const user = users.find((user: { username: string, password: string }) => user.username === username && user.password === password);
+        if (user) {
+            alert('Login eseguito!');
+            navigate('/home');
+        } else {
+            alert('Login errato');
         }
     };
 

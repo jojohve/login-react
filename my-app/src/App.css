@@ -1,11 +1,14 @@
 #root {
   max-width: 1280px;
-  max-height: 1200px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   background-color:  #ecf0f1 ;
   border-radius: 2px;
+}
+
+.App {
+  height: 800px;
 }
 
 .logo {
@@ -14,9 +17,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -37,19 +42,27 @@
 }
 
 .navbar {
-  display:flex;
+  display: flex;
   font-size: 16px;
   height: 50px;
-  background-color: #2c3e50  ;
+  background-color: #2c3e50;
   border-radius: 5px;
-  align-items: center;
-  justify-content: space-around;
+  flex-direction: row;
 }
 
 .navbar-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.3%;
+  height: 50px;
   color: white;
   font-size: larger;
   text-decoration: none;
+}
+
+.navbar-link:hover {
+  background-color: rgb(72, 103, 131);
 }
 
 .titolo {
@@ -79,7 +92,7 @@
 }
 
 thead th:nth-child(1) {
-  width: 30%;
+  width: 40%;
 }
 
 thead th:nth-child(2) {
@@ -91,7 +104,11 @@ thead th:nth-child(3) {
 }
 
 thead th:nth-child(4) {
-  width: 35%;
+  width: 15%;
+}
+
+thead th:nth-child(5) {
+  width: 15%;
 }
 
 th,
