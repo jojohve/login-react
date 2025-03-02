@@ -13,8 +13,8 @@ function App() {
         <h1 className='titolo'>Login App</h1>
         <Navbar/>
           <Routes>
-            <Route path='/' element={<Main />} />
-            <Route path='/login' element={<Login />} />
+            <Route path='/' element={<Login />} />
+            <Route path='/login' element={<Main />} />
             <Route path='/about' element={<About />} />
           </Routes>
         </Router>
